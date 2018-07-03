@@ -90,4 +90,4 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
-ITEM_PIPELINES = {'quotesbot.pipelines.PicPipeline':100}
+# ITEM_PIPELINES = {'quotesbot.pipelines.PicPipeline':100}
