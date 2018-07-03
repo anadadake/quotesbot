@@ -5,7 +5,22 @@
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
+import urllib
+import urllib.request
+
+import os
 
 class QuotesbotPipeline(object):
     def process_item(self, item, spider):
         return item
+
+
+
+class PicPipeline(object):
+    def process_item(self, item, spider):
+        headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'}
+        req = urllib.request.Request(url=item['addr'], headers=headers)
+        res = urllib.request.urlopen(req)
+        file_name = os.path.join(r'D:\Downloads\1111', item['name'] + '.jpg')
+        with open(file_name, 'wb') as fp:
+            fp.write(res.read())
