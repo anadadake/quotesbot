@@ -69,6 +69,19 @@ ROBOTSTXT_OBEY = True
 #    'quotesbot.pipelines.SomePipeline': 300,
 #}
 
+# ITEM_PIPELINES = {'quotesbot.pipelines.PicPipeline':100}
+
+# added by Kevin on 2018-07-04 for quotes_spider.py
+ITEM_PIPELINES = {
+    'quotesbot.pipelines.PicPipeline': 300,
+    'quotesbot.pipelines.QuotesPipeline': 200,
+}
+
+# added by Kevin on 2018-07-04 for quotes_spider.py
+# ITEM_PIPELINES = {
+#     'quotesbot.pipelines.QuotesPipeline': 300,
+# }
+
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True
@@ -89,3 +102,4 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
