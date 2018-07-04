@@ -12,7 +12,7 @@ if __name__ == '__main__':
     #cmdline.execute('scrapy crawl meijutt_new_100 -o meiju.csv'.split())
 
     #校花网
-    # cmdline.execute('scrapy crawl xiaohua_spider -o xiaohua.csv '.split())
+    cmdline.execute('scrapy crawl xiaohua_spider -o xiaohua.csv '.split())
 
-    #爬取http://quotes.toscrape.com/， 带换页
-    cmdline.execute('scrapy crawl quoters_spider -o quoters_spider.csv'.split())
+    #爬取http://quotes.toscrape.com/， 使用item的pipeline
+    # cmdline.execute('scrapy crawl quoters_spider -o quoters_spider.csv'.split())
