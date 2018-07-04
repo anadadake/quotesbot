@@ -74,6 +74,7 @@ ROBOTSTXT_OBEY = True
 # added by Kevin on 2018-07-04 for quotes_spider.py
 ITEM_PIPELINES = {
     'quotesbot.pipelines.PicPipeline': 300,
+    'quotesbot.pipelines.QuotesPipeline': 200,
 }
 
 # added by Kevin on 2018-07-04 for quotes_spider.py

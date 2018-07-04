@@ -29,6 +29,7 @@ class PicPipeline(object):
 
     def process_item(self, item, spider):
 
+        print('PicPipeline')
         # Process 1: dump into json file
         line = json.dumps(dict(item)) + "\n"
         self.file.write(line)
@@ -51,5 +52,6 @@ class PicPipeline(object):
 
 class QuotesPipeline(object):
     def process_item(self, item, spider):
+        print('QuotesPipeline')
         print(item)
         return item
