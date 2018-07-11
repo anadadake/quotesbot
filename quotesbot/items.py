@@ -22,3 +22,8 @@ class XiaohuaItem(scrapy.Item):
     name = scrapy.Field()
     pic_url = scrapy.Field()
     home_page_url = scrapy.Field()
+
+class MatplotlibExampleSrcItem(scrapy.Item):
+    example_name = scrapy.Field()
+    file_urls = scrapy.Field()
+    files = scrapy.Field()

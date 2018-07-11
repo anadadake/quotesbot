@@ -20,7 +20,7 @@ NEWSPIDER_MODULE = 'quotesbot.spiders'
 #USER_AGENT = 'quotesbot (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -71,11 +71,18 @@ ROBOTSTXT_OBEY = True
 
 # ITEM_PIPELINES = {'quotesbot.pipelines.PicPipeline':100}
 
-# added by Kevin on 2018-07-04 for quotes_spider.py
+# added by Kevin on 2018-07-11 for toscrape-matplotlib-src-code.py
 ITEM_PIPELINES = {
-    'quotesbot.pipelines.PicPipeline': 300,
-    'quotesbot.pipelines.QuotesPipeline': 200,
+    'scrapy.pipelines.files.FilesPipeline': 1
 }
+
+FILES_STORE='matplotlib_example_src'
+
+# added by Kevin on 2018-07-04 for quotes_spider.py
+# ITEM_PIPELINES = {
+#     'quotesbot.pipelines.PicPipeline': 300,
+#     'quotesbot.pipelines.QuotesPipeline': 200,
+# }
 
 # added by Kevin on 2018-07-04 for quotes_spider.py
 # ITEM_PIPELINES = {
